@@ -1,0 +1,7 @@
+*.pt filter=lfs diff=lfs merge=lfs -text
+DATA/ARTICLES/article_content_es.csv filter=lfs diff=lfs merge=lfs -text
+DATA/ARTICLES/article_content_pt.csv filter=lfs diff=lfs merge=lfs -text
+DATA/SUBSETS_ES/ARTICLES_SUBSETS_ES/global_articles_es_disjoint.csv filter=lfs diff=lfs merge=lfs -text
+DATA/SUBSETS_ES/GRAPHS/global/global_clustered_graph.json filter=lfs diff=lfs merge=lfs -text
+DATA/SUBSETS_ES/GRAPHS/global/provenance/global_clustered_provenance.json filter=lfs diff=lfs merge=lfs -text
+DATA/SUBSETS_with_relations/GRAPHS/global/global_clustered_graph.json filter=lfs diff=lfs merge=lfs -text
