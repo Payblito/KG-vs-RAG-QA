@@ -1,0 +1,56 @@
+You will extract subject-predicate-object triples from a source text to build a knowledge graph. A list of entities has already been extracted from this text, and your task is to identify the relationships between these entities.
+
+Your task is to extract triples in the form (subject | predicate | object) where:
+- The **subject** must be an entity from the entities list above
+- The **object** must be an entity from the entities list above  
+- The **predicate** describes the relationship between the subject and object
+
+## Extraction Guidelines
+
+Follow these rules when extracting relationships:
+
+**Accuracy and Faithfulness:**
+- Only extract relationships that are explicitly stated or clearly implied in the source text
+- Do not infer relationships that go beyond what the text states
+- Extract only factual relationships (not opinions, hypotheticals, or negated statements)
+
+**Predicate Quality:**
+- Use clear, specific predicates that precisely describe the relationship
+- Examples of good predicates: "founded_by", "located_in", "works_for", "invented", "part_of", "owns", "manages", "created", "acquired"
+- Avoid vague predicates like "related_to" or "associated_with" unless no more specific relationship can be determined
+
+**Directionality:**
+- Ensure the subject-predicate-object order correctly represents the relationship direction
+- For example: (Apple | founded_by | Steve Jobs) not (Steve Jobs | founded_by | Apple)
+
+**Thoroughness:**
+- Extract ALL meaningful relationships present in the text
+- Pay special attention to entities that might otherwise have no connections—if an entity was included in the list, it is likely important and should have at least one relationship
+- Your goal is to maximize connectivity in the knowledge graph and minimize isolated entities
+
+## Process
+
+Before providing your final output, work through your analysis systematically inside <analysis> tags. Follow these steps:
+
+1. **Map entities to text**: For each entity in the entities list, quote the relevant passage(s) from the source text where that entity appears or is discussed. This will help you keep track of the context for each entity.
+
+2. **Identify relationships systematically**: Go through the entities and look for connections. For each potential relationship:
+   - Quote the specific text that supports the relationship
+   - Identify the subject entity
+   - Identify the object entity
+   - Determine the predicate that best describes the relationship
+   - Verify the directionality is correct
+   - Confirm this relationship is faithful to the source text
+
+3. **Draft initial triples**: Based on your relationship identification, write out all the triples you've found with a brief note about the supporting evidence.
+
+4. **Check for isolated entities**: Review your list of triples and identify any entities from the entities list that don't appear in any triple. For each isolated entity:
+   - Re-examine the source text quotes you gathered in step 1
+   - Look for indirect or subtle connections you may have missed
+   - Consider whether there are any relationships you can extract
+
+5. **Finalize triples**: Create your final list of verified triples to include in your output.
+
+## Suggested Predicates
+
+If a list of suggested predicates is provided, prefer one of them when it is a relevant fit for the relationship between entities. If none of the suggestions fit, you may propose another precise predicate.

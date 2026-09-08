@@ -1,0 +1,2 @@
+[console_scripts]
+kggen = kg_gen.cli:main
