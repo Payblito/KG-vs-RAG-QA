@@ -1,3 +1,5 @@
+DATA/ARTICLES/*.csv filter=lfs diff=lfs merge=lfs -text
+DATA/**/global_clustered_provenance.json filter=lfs diff=lfs merge=lfs -text
 *.pt filter=lfs diff=lfs merge=lfs -text
 DATA/ARTICLES/article_content_es.csv filter=lfs diff=lfs merge=lfs -text
 DATA/ARTICLES/article_content_pt.csv filter=lfs diff=lfs merge=lfs -text
