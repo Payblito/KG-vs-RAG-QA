@@ -68,7 +68,6 @@ jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 jupyter_client @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_jupyter_client_1780678109/work
 jupyter_core @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_jupyter_core_1760643864/work
--e git+https://github.com/stair-lab/kg-gen.git@6259b4c71523ceae75dafb4acec2eb833bef8f8e#egg=kg_gen
 kiwisolver==1.5.0
 litellm==1.92.0
 markdown-it-py==4.2.0
