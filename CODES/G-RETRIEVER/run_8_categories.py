@@ -59,10 +59,7 @@ FIXED_CONFIG = {
     "modes_to_run": [
         "zero_shot", 
         "rag", 
-        # "graph_rag_pcst", 
-        # "graph_rag_topk", 
         "kaping", 
-        # "oracle_triplets"
     ],
     "retrieval_query_mode": "question_options",
     "n_samples": None,
@@ -85,7 +82,7 @@ FIXED_CONFIG = {
 }
 
 llm_slang=FIXED_CONFIG["llm_id"].split("/")[-1].replace("-", "_")
-OUTPUT_DIR = DATA / "RESULTS_8_CATEGORIES" / llm_slang
+OUTPUT_DIR = DATA / "RESULTS_CATEGORIES" / llm_slang
 
 
 def make_config(category: str) -> Config:
@@ -94,7 +91,7 @@ def make_config(category: str) -> Config:
         **FIXED_CONFIG,
         "CATEGORY": category,
         # Questions/articles
-        "questions_csv": str(DATA / "QUESTIONS" / "mcq_eval_results_es__ministral-small.csv"),
+        "questions_csv": str(DATA / "QUESTIONS" / "mcq_es.csv"),
         "articles_csv": str(DATA / "SUBSETS_ES" / "ARTICLES_SUBSETS_ES" / f"{category}_articles_es_disjoint.csv"),
         
         # Graphe
