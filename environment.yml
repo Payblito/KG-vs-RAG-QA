@@ -1,4 +1,4 @@
-name: LLM_BIAS_env
+name: kg_rag_env
 channels:
   - defaults
   - conda-forge
