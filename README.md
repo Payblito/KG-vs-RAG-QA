@@ -6,8 +6,6 @@ Large language models (LLMs) suffer from a long-tail deficit: culturally specifi
 
 ## Paper
 
-## How to cite
-
 ## Setup
 
 ```bash
@@ -16,8 +14,6 @@ conda activate kg_rag_env
 ```
 
 Experiments were conducted on a system equipped with two NVIDIA RTX 3090 GPUs.
-
-## Data
 
 ## Reproducing the experiments
 
@@ -46,6 +42,7 @@ Two configuration files control every run:
 Switching datasets only requires changing the data directory in the config: pointing it to `DATA/SUBSETS_ES/` runs the standard Spanish setting, `DATA/SUBSETS_with_relations/` runs the benchmark-aware (hint-guided) graphs, and `DATA/SUBSETS_PT/` runs the zero-shot Portuguese transfer experiment.
 
 These scripts reuse and adapt the original G-Retriever codebase (He et al., 2024), with modifications for multiple-choice evaluation, the Linear module ablation, and the multilingual setting.
+
 Reference: [G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering (He et al., 2024)](https://arxiv.org/abs/2402.07630) and the G-Retriever GitHub repo at [https://github.com/XiaoxinHe/G-Retriever](https://github.com/XiaoxinHe/G-Retriever).
 
 ## Repository structure
@@ -82,3 +79,5 @@ Reference: [G-Retriever: Retrieval-Augmented Generation for Textual Graph Unders
 ├── environment.yml                   # Conda environment spec
 └── requirements.txt                  # Pip dependencies
 ```
+
+## How to cite
